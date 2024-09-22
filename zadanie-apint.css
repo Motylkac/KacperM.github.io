@@ -1,0 +1,66 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+.header {
+  padding: 75px;
+  text-align: center;
+  background: rgb(0, 146, 146);
+  color: white;
+}
+
+.linki {
+  display: flex;
+  background-color: #1f1919;
+}
+
+.linki a {
+  color: rgb(205, 203, 203);
+  padding: 25px 25px;
+  text-align: center;
+}
+
+.rzad {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lewak {
+  flex: 20%;
+  background-color: #d5d4d4;
+  padding: 25px;
+}
+
+.prawak {
+  flex: 70%;
+  background-color: rgb(230, 230, 230);
+  padding: 25px;
+}
+
+.zdjecie {
+  background-color: #7f7f7f;
+  width: 100%;
+  padding: 25px;
+}
+
+.stopka {
+  padding: 25px;
+  text-align: center;
+  justify-content: center;
+  background: #bebebe;
+}
+
+@media screen and (max-width: 650px) {
+  .rzad{    
+    flex-direction: column;
+  }
+  .linki {
+    flex-direction: column;
+  }
+}
