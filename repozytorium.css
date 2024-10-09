@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    background-color: rgb(16, 21, 24) ;
+    justify-content: center;
+}
+
+
+.content{
+    width: 60%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    flex-direction: column;
+
+    background-color: rgb(123, 0, 145);
+    
+}
+
+.zdjecie{   
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    padding: 10px;
+}
+
+
+
+p{
+    display: flex;
+    justify-content: center;
+    color: rgb(175, 141, 134)
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 195, 255);
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    color: rgb(233, 215, 88);
+}
