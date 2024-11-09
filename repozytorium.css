@@ -1,47 +1,172 @@
-body{
+/* Resetowanie marginesów i paddingu w ciele strony */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
     display: flex;
-    background-color: rgb(16, 21, 24) ;
-    justify-content: center;
-}
-
-
-.content{
-    width: 60%;
-    height: 100%;
-    
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
     flex-direction: column;
-
-    background-color: rgb(123, 0, 145);
-    
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
-.zdjecie{   
+/* Nawigacja */
+.navbar {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
     display: flex;
-    align-content: center;
     justify-content: center;
-    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+/* Główna sekcja */
+.content {
+    width: 80%;
+    max-width: 900px;
+    margin-top: 80px; /* Przesuwamy zawartość w dół, aby nie zachodziła na nawigację */
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sekcja zdjęcia */
+.zdjecie {
+    display: flex;
+    justify-content: center;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
-
-
-p{
-    display: flex;
-    justify-content: center;
-    color: rgb(175, 141, 134)
+.zdjecie img {
+    width: 65%;
+    max-width: 500px;
+    object-fit: cover;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-    color: rgb(0, 195, 255);
+/* Sekcja O mnie */
+#about {
+    margin-bottom: 20px;
 }
 
-h3{
-    display: flex;
-    justify-content: center;
-    color: rgb(233, 215, 88);
+#about p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+}
+
+/* Stylowanie nagłówków */
+h1 {
+    color: #00c3ff;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+h3 {
+    color: #e9d758;
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+/* Przyciski do rozwijania */
+button.toggle-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.toggle-button:hover {
+    background-color: #444;
+}
+
+/* Ukrywanie kontentu */
+.hidden {
+    display: none;
+}
+
+/* Stylowanie linków */
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: #00c3ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsywność: dla ekranów o szerokości max 768px (tablety i mniejsze urządzenia) */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    button.toggle-button {
+        font-size: 1rem;
+    }
+}
+
+/* Responsywność: dla ekranów o szerokości max 480px (telefony) */
+@media (max-width: 480px) {
+    .content {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    button.toggle-button {
+        font-size: 0.9rem;
+    }
 }

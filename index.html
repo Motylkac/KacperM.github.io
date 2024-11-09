@@ -3,29 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Strona Osobista</title>
     <link rel="stylesheet" href="repozytorium.css">
 </head>
 <body>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#skills">Umiejętności</a></li>
+            <li><a href="#about">O mnie</a></li>
+        </ul>
+    </nav>
+
     <div class="content">
         <div class="zdjecie">
-            <img src="person.jpg" width="50%" >
+            <img src="https://louisville.edu/enrollmentmanagement/images/person-icon/image" width="50%">
         </div>
     
         <h1>K.M</h1>
-        <h3>Kontakt:</h3>
-
-        <p>telefon: 694 202 137</p>
-        <p>email: fakeemail@gmail.com</p>
-        <p>adres: smiesznaulica 31</p>
         
-        <h3>Doswiadczenie i umiejetnosci: </h3>
+        <!-- Sekcja O mnie -->
+        <div id="about">
+            <h3>O mnie:</h3>
+            <button class="toggle-button" onclick="toggleSection('about-details')">Pokaż o mnie</button>
+            <div id="about-details" class="hidden">
+            <p>Jestem pasjonatem web developmentu i nowych technologii. Uczę się HTML, CSS, JavaScript i innych narzędzi, aby tworzyć dynamiczne i funkcjonalne aplikacje internetowe.</p>
+            </div>
+        </div>
 
-        <p>HTML i CSS</p>
-        <p>losowa umiejetnosc</p>
-        <p>kreatywnosc</p>
-        <p>determinacja</p>
+        <!-- Kontakt -->
+        <div id="contact">
+            <h3>Kontakt:</h3>
+            <button class="toggle-button" onclick="toggleSection('contact-details')">Pokaż kontakt</button>
+            <div id="contact-details" class="hidden">
+                <p>Telefon: 694 202 137</p>
+                <p>Email: fakeemail@gmail.com</p>
+                <p>Adres: Smiesznaulica 31</p>
+            </div>
+        </div>
 
+        <!-- Umiejętności -->
+        <div id="skills">
+            <h3>Doswiadczenie i umiejetnosci:</h3>
+            <button class="toggle-button" onclick="toggleSection('skills-details')">Pokaż umiejętności</button>
+            <div id="skills-details" class="hidden">
+                <p>HTML i CSS</p>
+                <p>JavaScript</p>
+                <p>React</p>
+                <p>Node.js</p>
+                <p>UI/UX Design</p>
+                <p>Git i GitHub</p>
+                <p>Automatyzacja zadań</p>
+                <p>Rozwiązywanie problemów</p>
+                <p>Database Management</p>
+                <p>Testowanie i debugowanie</p>
+            </div>
+        </div>
+
+        <!-- Linki -->
+        <div class="links">
+            <a href="https://pl.wikipedia.org/wiki/Mas%C5%82o" target="_blank">Masło - Wikipedia</a>
+            <a href="https://theuselessweb.com/" target="_blank">The Useless Web</a>
+        </div>
     </div>
+
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
